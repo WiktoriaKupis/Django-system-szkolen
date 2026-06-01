@@ -1,0 +1,23 @@
+{% extends 'oferta/base.html' %}
+
+{% block content %}
+<h1>Lista kategorii</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nazwa</th>
+        <th>Publikuj</th>
+        <th>Kolejność</th>
+    </tr>
+
+    {% for kategoria in kategorie %}
+    <tr>
+        <td>{{ kategoria.id }}</td>
+        <td>{{ kategoria.nazwa }}</td>
+        <td>{{ kategoria.publikuj }}</td>
+        <td>{{ kategoria.kolejnosc }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

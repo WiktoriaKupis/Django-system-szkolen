@@ -1,0 +1,17 @@
+{% extends 'oferta/base.html' %}
+
+{% block content %}
+<h1>Oferta publiczna - kategorie</h1>
+
+<ul>
+    {% for kategoria in kategorie %}
+        <li>
+            <a href="/offer/{{ kategoria.id }}/">
+                {{ kategoria.nazwa }}
+            </a>
+        </li>
+    {% empty %}
+        <li>Brak kategorii.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'oferta/base.html' %}
+
+{% block content %}
+<h1>Szkolenia w kategorii: {{ kategoria.nazwa }}</h1>
+
+<ul>
+    {% for szkolenie in szkolenia %}
+        <li>
+            <a href="/offer/{{ kategoria.id }}/course/{{ szkolenie.id }}/">
+                {{ szkolenie.tytul }}
+            </a>
+            - {{ szkolenie.cena }} zł
+        </li>
+    {% empty %}
+        <li>Brak szkoleń w tej kategorii.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

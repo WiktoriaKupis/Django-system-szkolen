@@ -1,0 +1,12 @@
+{% extends 'oferta/base.html' %}
+
+{% block content %}
+<h1>{{ szkolenie.tytul }}</h1>
+
+<p><b>Numer:</b> {{ szkolenie.numer }}</p>
+<p><b>Liczba godzin:</b> {{ szkolenie.liczba_godzin }}</p>
+<p><b>Cena:</b> {{ szkolenie.cena }} zł</p>
+<p><b>Opis:</b> {{ szkolenie.opis }}</p>
+
+<a href="/register/{{ szkolenie.id }}/">Zarejestruj się na szkolenie</a>
+{% endblock %}

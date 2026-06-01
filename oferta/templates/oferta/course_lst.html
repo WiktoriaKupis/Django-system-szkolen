@@ -1,0 +1,25 @@
+{% extends 'oferta/base.html' %}
+
+{% block content %}
+<h1>Lista szkoleń</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Tytuł</th>
+        <th>Kategoria</th>
+        <th>Cena</th>
+        <th>Godziny</th>
+    </tr>
+
+    {% for szkolenie in szkolenia %}
+    <tr>
+        <td>{{ szkolenie.id }}</td>
+        <td>{{ szkolenie.tytul }}</td>
+        <td>{{ szkolenie.kategoria }}</td>
+        <td>{{ szkolenie.cena }}</td>
+        <td>{{ szkolenie.liczba_godzin }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
